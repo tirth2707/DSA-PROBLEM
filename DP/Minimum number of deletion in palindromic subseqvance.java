@@ -1,6 +1,7 @@
-class Solution {
-    public int longestPalindromeSubseq(String s1) {
-        
+class Solution{
+    
+    static int minimumNumberOfDeletions(String s1)
+    {
         String s2 = new StringBuffer(s1).reverse().toString();
         
         int n=s1.length();
@@ -36,7 +37,7 @@ class Solution {
                 
             }
         }
-        return dp[n][m];
-        
+        int temp=dp[n][m];
+        return n-temp;
     }
 }
